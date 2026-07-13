@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngelCode - Oficina de Alta Performance para Negócios</title>
+  <meta
+    name="description"
+    content="Encontramos onde sua empresa perde dinheiro: leads sem resposta, follow-up esquecido, horas de retrabalho. Depois instalamos os sistemas que corrigem. Começa pelo diagnóstico."
+  >
+  <meta name="author" content="Mizael dos Anjos">
+  <meta name="theme-color" content="#08090A">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AngelCode - sua empresa perde vendas todos os dias. Você só não vê onde.">
+  <meta
+    property="og:description"
+    content="Oficina de alta performance para negócios: encontramos os gargalos que custam dinheiro na sua operação e instalamos os sistemas que corrigem. Vendas, atendimento e gestão rodando sem depender de você."
+  >
+  <meta property="og:image" content="assets/logo-metal.png">
+
+  <link rel="preload" as="image" href="assets/logo-mark-white.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <div class="progress" data-progress aria-hidden="true"></div>
+
+  <div class="bg-field" aria-hidden="true">
+    <div class="bg-field__grid"></div>
+    <div class="bg-field__glow"></div>
+  </div>
+
+  <header class="topbar" data-elevate>
+    <div class="container topbar__inner">
+      <a class="brand" href="#topo" aria-label="AngelCode - voltar ao topo">
+        <img
+          class="brand__mark"
+          src="assets/logo-mark-white.png"
+          alt=""
+          width="38"
+          height="38"
+        >
+        <span class="brand__stack">
+          <strong class="brand__name">Angel<em>Code</em></strong>
+          <small class="brand__sub num">oficina de alta performance</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-btn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-main"
+        aria-label="Abrir menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav-main" aria-label="Navegação principal">
+        <a href="#motor">O motor</a>
+        <a href="#diagnostico">Diagnóstico</a>
+        <a href="#caminho">O caminho</a>
+        <a href="#bancada">A bancada</a>
+        <a href="#quem">Quem prepara</a>
+        <a class="btn btn--brand nav__cta" data-whatsapp-link href="https://wa.me/5548996986794">
+          Agendar diagnóstico
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero" id="topo">
+      <div class="container hero__frame">
+        <div class="hero__copy reveal">
+          <p class="kicker num"><span class="kicker__dot"></span>Oficina AngelCode - performance operacional</p>
+          <h1 class="hero__h1">
+            Sua empresa perde vendas <span class="hero__dim">todos os dias</span>.<br>
+            Você só não vê <em>onde</em>.
+          </h1>
+          <p class="hero__sub">
+            Eu encontro os gargalos que custam dinheiro na sua operação: lead esperando
+            resposta, follow-up esquecido, equipe presa em tarefa repetida. E instalo os
+            sistemas que fazem a empresa vender mais sem contratar mais ninguém.
+            Todo negócio é um motor. O seu está rodando abaixo da potência.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--brand btn--xl" data-whatsapp-link href="https://wa.me/5548996986794">
+              Quero encontrar meus gargalos
+            </a>
+            <a class="btn btn--line btn--xl" href="#diagnostico">Como funciona</a>
+          </div>
+          <div class="hero__stack">
+            <span class="hero__stack-label num">O que passa pela bancada</span>
+            <ul class="hero__stack-items num">
+              <li>WhatsApp API Oficial</li>
+              <li>n8n</li>
+              <li>Supabase</li>
+              <li>CRM sob medida</li>
+              <li>Agentes de IA</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Painel: scanner operacional -->
+        <aside class="scan reveal reveal--late" data-scan aria-label="Demonstração: scanner operacional diagnosticando um negócio">
+          <header class="scan__bar num">
+            <span class="scan__dot"></span>
+            <span class="scan__title">scanner operacional&trade;</span>
+            <span class="scan__power"><span data-power-label>potência atual</span> <strong data-power>54%</strong></span>
+          </header>
+
+          <ul class="scan__areas" aria-hidden="true">
+            <li class="scan__area" data-area>
+              <span class="scan__label num">Vendas</span>
+              <span class="scan__track"><span class="scan__fill" data-fill></span></span>
+              <span class="scan__status num" data-status>-</span>
+            </li>
+            <li class="scan__area" data-area>
+              <span class="scan__label num">Atendimento</span>
+              <span class="scan__track"><span class="scan__fill" data-fill></span></span>
+              <span class="scan__status num" data-status>-</span>
+            </li>
+            <li class="scan__area" data-area>
+              <span class="scan__label num">Processos</span>
+              <span class="scan__track"><span class="scan__fill" data-fill></span></span>
+              <span class="scan__status num" data-status>-</span>
+            </li>
+            <li class="scan__area" data-area>
+              <span class="scan__label num">Gestão</span>
+              <span class="scan__track"><span class="scan__fill" data-fill></span></span>
+              <span class="scan__status num" data-status>-</span>
+            </li>
+            <li class="scan__area" data-area>
+              <span class="scan__label num">Tecnologia</span>
+              <span class="scan__track"><span class="scan__fill" data-fill></span></span>
+              <span class="scan__status num" data-status>-</span>
+            </li>
+          </ul>
+
+          <div class="gauge" aria-hidden="true">
+            <span class="gauge__label num">régua de potência</span>
+            <div class="gauge__bars" data-gauge></div>
+            <span class="gauge__read num" data-gauge-read>54%</span>
+          </div>
+
+          <div class="oplog num" aria-hidden="true">
+            <div class="oplog__lines" data-log></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- fita técnica (léxico da oficina) -->
+    <div class="tape" aria-hidden="true">
+      <div class="tape__track" data-tape></div>
+    </div>
+
+    <!-- ══════════ FRASE-PONTE (método em uma frase) ══════════ -->
+    <section class="sec bridge" aria-label="Método AngelCode em uma frase">
+      <div class="container">
+        <blockquote class="bridge__quote reveal">
+          <p>
+            Nós não começamos perguntando <span class="bridge__dim">qual sistema você precisa</span>.
+            Começamos descobrindo <em>onde sua empresa perde dinheiro</em>.
+            Só depois decidimos qual peça instalar.
+          </p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ══════════ O MOTOR (antes / depois) ══════════ -->
+    <section class="sec" id="motor">
+      <div class="container">
+        <header class="sec__head reveal">
+          <p class="sec__tag num">/ 01 - o motor</p>
+          <h2 class="sec__h2">A maioria acelera um motor cheio de falhas.</h2>
+          <p class="sec__sub">
+            Mais tráfego, mais equipe, mais horas em cima de uma operação mal regulada:
+            é dinheiro entrando por um lado e vazando pelo outro. Nós corrigimos
+            o motor primeiro.
+          </p>
+        </header>
+        <div class="shift reveal reveal--late">
+          <div class="shift__col shift__col--before">
+            <h3 class="shift__label num">Motor mal regulado</h3>
+            <ul id="shift-before"></ul>
+          </div>
+          <div class="shift__col shift__col--after">
+            <h3 class="shift__label num">+ motor preparado</h3>
+            <ul id="shift-after"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ DIAGNÓSTICO ══════════ -->
+    <section class="sec sec--ruled" id="diagnostico">
+      <div class="container diag">
+        <div class="diag__copy reveal">
+          <p class="sec__tag num">/ 02 - diagnóstico</p>
+          <h2 class="sec__h2">Antes de acelerar, é preciso abrir o capô.</h2>
+          <p class="sec__sub">
+            Tudo começa pelo <strong>Scanner Operacional&trade;</strong>: eu entro na sua
+            operação e mapeio onde ela perde dinheiro. Vendas que escapam, processos
+            lentos, horas gastas em tarefa manual, retrabalho que ninguém mede. Antes de
+            falar de ferramenta, de IA ou de qualquer peça nova.
+          </p>
+          <p class="diag__q">
+            A pergunta que o scanner responde:
+            <em>“quanto esse motor está deixando de faturar por causa dos gargalos?”</em>
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--brand btn--xl" data-whatsapp-link href="https://wa.me/5548996986794">
+              Agendar meu diagnóstico
+            </a>
+          </div>
+          <p class="finale__note num">Direto no WhatsApp, sem script de vendedor.</p>
+        </div>
+
+        <aside class="diag__card reveal reveal--late">
+          <h3 class="diag__card-title num">o que o scanner varre</h3>
+          <ul class="diag__list num" id="diag-areas"></ul>
+          <div class="diag__deliver">
+            <span class="diag__card-title num">o que você recebe</span>
+            <p>
+              O mapa do dinheiro que está escapando: onde estão os gargalos, o que
+              corrigir primeiro e o que cada correção destrava. Em linguagem de dono
+              de negócio, não de técnico.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ══════════ O CAMINHO (jornada direta) ══════════ -->
+    <section class="sec sec--ruled" id="caminho">
+      <div class="container">
+        <header class="sec__head reveal">
+          <p class="sec__tag num">/ 03 - o caminho</p>
+          <h2 class="sec__h2">Da bancada à pista, em três etapas.</h2>
+          <p class="sec__sub">
+            Sem pacote fechado, sem promessa de palco. O motor dita o ritmo:
+            primeiro o diagnóstico, depois o remap, e só então a forja.
+          </p>
+        </header>
+        <ol class="steps steps--three" id="steps"></ol>
+      </div>
+    </section>
+
+    <!-- ══════════ A BANCADA (sistemas / peças) ══════════ -->
+    <section class="sec sec--ruled" id="bancada">
+      <div class="container">
+        <header class="sec__head reveal">
+          <p class="sec__tag num">/ 04 - a bancada</p>
+          <h2 class="sec__h2">As peças que eu instalo</h2>
+          <p class="sec__sub">
+            Cinco tipos de sistema. O critério é um só: ou devolvem dinheiro e tempo
+            para a operação, ou não saem da bancada.
+          </p>
+        </header>
+        <div class="ledger" id="systems"></div>
+      </div>
+    </section>
+
+    <!-- ══════════ MANIFESTO ══════════ -->
+    <!-- (seção "Na pista / Motores em preparação" removida por ora — ver
+         Pendências no README; markup no git history, dados prontos no site.js) -->
+    <section class="sec sec--manifesto">
+      <div class="container manifesto reveal">
+        <p class="sec__tag num">/ 05 - manifesto</p>
+        <blockquote class="manifesto__quote">
+          <p>Eu não ensino IA. <em>Eu faço o motor do negócio trabalhar na potência máxima.</em></p>
+          <p>
+            Todo negócio tem potência escondida. O problema é que poucos sabem
+            onde procurar.
+          </p>
+          <p>
+            A maioria tenta acelerar um motor cheio de falhas. Nós corrigimos
+            o motor primeiro.
+          </p>
+          <p>
+            Não construo automações. Construo operações: com sistema, com número
+            e com a tela aberta pra você ver funcionando.
+          </p>
+          <p class="manifesto__close">Antes de acelerar, é preciso abrir o capô.</p>
+          <footer class="manifesto__sign">- Mizael Anjos · Oficina AngelCode</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ══════════ QUEM PREPARA ══════════ -->
+    <section class="sec sec--ruled" id="quem">
+      <div class="container who">
+        <figure class="who__visual reveal">
+          <img
+            src="assets/logo-metal.png"
+            alt="Marca AngelCode em aplicação metálica"
+            loading="lazy"
+          >
+          <figcaption class="num">Mizael dos Anjos · chefe de oficina</figcaption>
+        </figure>
+        <div class="who__copy reveal reveal--late">
+          <p class="sec__tag num">/ 06 - quem prepara</p>
+          <h2 class="sec__h2">Quem prepara o motor</h2>
+          <p class="who__bio">
+            Sou gestor comercial de uma operação real de proteção veicular. Equipe, meta,
+            cliente ligando, follow-up estourando. Eu era o gargalo do meu próprio motor:
+            tudo passava por mim, e o que dependia da minha memória custava venda.
+          </p>
+          <p class="who__bio">
+            Cada sistema que eu instalo nasceu aí dentro, porque um problema real estava
+            custando dinheiro. O agente de WhatsApp existe porque lead esfriava de
+            madrugada. O CRM existe porque negociação se perdia em planilha e caderno.
+            O painel existe porque eu só descobria o número quando o mês fechava.
+            Nada aqui é template, nem ferramenta comprada com o meu logo em cima.
+          </p>
+          <p class="who__bio">
+            <strong>Os sistemas que entram na sua operação são os mesmos que rodam na
+            minha, todos os dias, com a tela aberta pra você ver.</strong> Se algo não
+            funciona, eu sou o primeiro a sentir no caixa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CTA FINAL ══════════ -->
+    <section class="sec" id="contato">
+      <div class="container">
+        <div class="finale reveal">
+          <p class="sec__tag num">/ 07 - contato</p>
+          <h2 class="finale__h2">
+            Quanto dinheiro o seu negócio está deixando na mesa
+            só porque ninguém abriu o capô?
+          </h2>
+          <p class="finale__p">
+            Me chama no WhatsApp e me conta como a sua operação roda hoje. Eu te digo
+            onde estão os gargalos, e o que não vale a pena mexer.
+          </p>
+          <a class="btn btn--brand btn--xl" data-whatsapp-link href="https://wa.me/5548996986794">
+            Quero preparar meu motor
+          </a>
+          <p class="finale__note num">Resposta direta, de operador pra operador.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="foot">
+    <div class="container foot__inner">
+      <a class="brand" href="#topo" aria-label="AngelCode">
+        <img
+          class="brand__mark"
+          src="assets/logo-mark-white.png"
+          alt=""
+          width="34"
+          height="34"
+        >
+        <span class="brand__stack">
+          <strong class="brand__name">Angel<em>Code</em></strong>
+        </span>
+      </a>
+      <p class="foot__tagline">Não construímos automações. Construímos operações.</p>
+      <nav class="foot__links" aria-label="Contato">
+        <a data-whatsapp-link href="https://wa.me/5548996986794">WhatsApp</a>
+        <a data-instagram-link href="https://instagram.com/mizael.anjos_">Instagram</a>
+      </nav>
+    </div>
+    <div class="container foot__base num">
+      <span>&copy; <span id="year"></span> AngelCode · Mizael dos Anjos</span>
+      <span>oficina de alta performance</span>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>

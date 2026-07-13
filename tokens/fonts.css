@@ -1,0 +1,8 @@
+/* ============================================================
+   FONTES — Mizael Anjos
+   Cinzel (títulos — serif monumental, "luxo silencioso") · Montserrat (corpo)
+   · Inter (fallback de corpo) · JetBrains Mono (números/código)
+   Todas disponíveis no Google Fonts — carregadas via @import abaixo.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');

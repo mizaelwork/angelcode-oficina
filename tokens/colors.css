@@ -1,0 +1,61 @@
+/* ============================================================
+   COR — Mizael Anjos
+   Dark-first. Neutros grafite + UM ponto de cor (vermelho).
+   ============================================================ */
+
+:root {
+  /* ---------- NEUTROS (escala grafite) ---------- */
+  --ma-black:        #08090A; /* fundo base — não preto puro (estilo Vercel/Linear) */
+  --ma-grafite-900:  #0E0F11;
+  --ma-grafite-800:  #141517; /* superfície / card */
+  --ma-grafite-700:  #1B1D20; /* superfície elevada */
+  --ma-grafite-600:  #26282C; /* borda / hover de superfície */
+  --ma-grafite-500:  #3A3D42; /* divisores fortes */
+  --ma-grafite-400:  #565A61;
+  --ma-grafite-300:  #8A8F98; /* texto muted / ícones */
+  --ma-grafite-200:  #A8ADB5; /* texto secundário */
+  --ma-grafite-100:  #D7DADF;
+  --ma-white:        #F4F5F7; /* texto primário (branco suave) */
+  --ma-white-pure:   #FFFFFF;
+
+  /* ---------- ACCENT (vermelho de marca — usar com disciplina) ---------- */
+  --ma-accent:         #BB0D1A; /* vermelho oficial do brand board */
+  --ma-accent-hover:   #DA2530; /* clareia no hover */
+  --ma-accent-pressed: #920911; /* escurece no pressed */
+  --ma-accent-soft:    rgba(187, 13, 26, 0.14); /* fundo sutil / chips */
+  --ma-accent-border:  rgba(187, 13, 26, 0.42);
+
+  /* ---------- SEMÂNTICOS (tema dark = padrão) ---------- */
+  --color-bg:             var(--ma-black);
+  --color-surface:        var(--ma-grafite-800);
+  --color-surface-raised: var(--ma-grafite-700);
+  --color-border:         var(--ma-grafite-600);
+  --color-divider:        var(--ma-grafite-700);
+  --color-text:           var(--ma-white);       /* ~16:1 sobre bg */
+  --color-text-secondary: var(--ma-grafite-200); /* ~7:1 */
+  --color-text-muted:     var(--ma-grafite-300); /* ~4.6:1 (AA) */
+  --color-primary:        var(--ma-accent);
+  --color-on-primary:     var(--ma-white-pure);
+
+  /* feedback */
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-error:   #DC2626;
+}
+
+/* ============================================================
+   TEMA CLARO (opcional — a marca é dark-first)
+   Aplique com <html data-theme="light"> ou .theme-light
+   ============================================================ */
+[data-theme="light"], .theme-light {
+  --color-bg:             #FFFFFF;
+  --color-surface:        #F7F8FA;
+  --color-surface-raised: #FFFFFF;
+  --color-border:         #E5E7EB;
+  --color-divider:        #EDEFF2;
+  --color-text:           #0E0F11;
+  --color-text-secondary: #3A3D42;
+  --color-text-muted:     #6B7280;
+  --color-primary:        #A50B16;
+  --color-on-primary:     #FFFFFF;
+}

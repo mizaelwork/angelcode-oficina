@@ -1,0 +1,41 @@
+/* ============================================================
+   TIPOGRAFIA — Mizael Anjos (brand board oficial)
+   Títulos: Cinzel / Trajan Pro (serif clássico, caixa-alta, "luxo silencioso")
+   Corpo:   Montserrat / Inter
+   Números/código: JetBrains Mono (extensão do sistema)
+   ============================================================ */
+
+:root {
+  --font-display: "Cinzel", "Trajan Pro", "Times New Roman", serif;  /* TÍTULOS */
+  --font-brand:   "Cinzel", "Trajan Pro", serif;                       /* wordmark / aliases */
+  --font-body:    "Montserrat", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono:    "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* escala de tamanho (base 16px) */
+  --text-xs:   0.75rem;  /* 12 */
+  --text-sm:   0.875rem; /* 14 */
+  --text-base: 1rem;     /* 16 */
+  --text-lg:   1.125rem; /* 18 */
+  --text-xl:   1.25rem;  /* 20 */
+  --text-2xl:  1.5rem;   /* 24 */
+  --text-3xl:  1.875rem; /* 30 */
+  --text-4xl:  2.25rem;  /* 36 */
+  --text-5xl:  3rem;     /* 48 */
+  --text-6xl:  3.75rem;  /* 60 */
+
+  /* pesos */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* altura de linha */
+  --leading-tight:  1.15; /* títulos */
+  --leading-snug:   1.35;
+  --leading-normal: 1.6;  /* corpo */
+
+  /* tracking */
+  --tracking-tight:  -0.02em; /* títulos */
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;  /* overline / labels caixa-alta */
+}
