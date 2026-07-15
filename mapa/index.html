@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checklist de Diagnóstico — AngelCode</title>
+<meta name="description" content="12 perguntas, 4 minutos. Descubra em qual degrau seu negócio está — e qual é o próximo.">
+<meta name="theme-color" content="#08090A">
+<meta property="og:title" content="Checklist de Diagnóstico — AngelCode">
+<meta property="og:description" content="12 perguntas, 4 minutos. Descubra em qual degrau seu negócio está — e qual é o próximo.">
+<meta property="og:type" content="website">
+<style>
+  /* ---------- FONTES LOCAIS — imunes ao CSP, seja qual for o que estiver valendo ---------- */
+  @font-face{font-family:'Cinzel';src:url('fonts/Cinzel-600.woff2') format('woff2');font-weight:600;font-display:swap}
+  @font-face{font-family:'Cinzel';src:url('fonts/Cinzel-700.woff2') format('woff2');font-weight:700;font-display:swap}
+  @font-face{font-family:'Montserrat';src:url('fonts/Montserrat-300.woff2') format('woff2');font-weight:300;font-display:swap}
+  @font-face{font-family:'Montserrat';src:url('fonts/Montserrat-400.woff2') format('woff2');font-weight:400;font-display:swap}
+  @font-face{font-family:'Montserrat';src:url('fonts/Montserrat-500.woff2') format('woff2');font-weight:500;font-display:swap}
+  @font-face{font-family:'Montserrat';src:url('fonts/Montserrat-600.woff2') format('woff2');font-weight:600;font-display:swap}
+  @font-face{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono-400.woff2') format('woff2');font-weight:400;font-display:swap}
+  @font-face{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono-500.woff2') format('woff2');font-weight:500;font-display:swap}
+  @font-face{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono-600.woff2') format('woff2');font-weight:600;font-display:swap}
+
+  :root{
+    --black:#08090A; --g900:#0E0F11; --g800:#141517; --g700:#1B1D20;
+    --g600:#26282C; --g500:#3A3D42; --g300:#8A8F98; --g200:#A8ADB5;
+    --g100:#D7DADF; --white:#F4F5F7;
+    --accent:#BB0D1A; --accent-hover:#DA2530;
+    --accent-soft:rgba(187,13,26,.14); --accent-border:rgba(187,13,26,.42);
+    --serif:'Cinzel',Georgia,serif;
+    --sans:'Montserrat',system-ui,-apple-system,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+    --wrap:660px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--sans); background:var(--black); color:var(--white);
+    line-height:1.6; font-size:17px;
+    padding-bottom:calc(84px + env(safe-area-inset-bottom));
+    overflow-x:hidden;
+  }
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px}
+  ::selection{background:var(--accent);color:#fff}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:52px 0 40px;overflow:hidden}
+  .hero::after{
+    content:'';position:absolute;right:-40%;top:-52%;
+    width:130vw;height:130vw;max-width:760px;max-height:760px;border-radius:50%;
+    background:radial-gradient(circle,rgba(187,13,26,.20) 0%,transparent 62%);
+    pointer-events:none;z-index:0;
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .brand{
+    font-family:var(--serif);font-size:15px;font-weight:600;
+    letter-spacing:.3em;text-transform:uppercase;
+  }
+  .brand i{color:var(--accent);font-style:normal}
+  .brand-sub{
+    font-family:var(--mono);font-size:10px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--g300);margin-top:8px;
+  }
+  h1{
+    font-family:var(--serif);font-weight:700;line-height:1.06;
+    font-size:clamp(38px,10vw,58px);margin:44px 0 20px;letter-spacing:-.01em;
+  }
+  .sub{
+    font-size:clamp(17px,4.4vw,21px);font-weight:300;color:var(--g100);
+    line-height:1.45;max-width:30ch;
+  }
+  .sub b{font-weight:600;color:var(--white)}
+  .pill{
+    display:inline-block;margin-top:28px;
+    font-family:var(--mono);font-size:13px;font-weight:500;
+    background:var(--accent-soft);border:1px solid var(--accent-border);
+    border-radius:999px;padding:9px 18px;
+  }
+
+  /* ---------- BLOCOS ---------- */
+  section{padding:44px 0;border-top:1px solid var(--g700)}
+  .kicker{
+    font-family:var(--mono);font-size:11px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:14px;
+  }
+  h2{
+    font-family:var(--serif);font-weight:700;line-height:1.16;
+    font-size:clamp(24px,6vw,32px);margin-bottom:20px;letter-spacing:-.01em;
+  }
+  p{color:var(--g100);margin-bottom:16px;font-size:16px}
+  p b,p strong{color:var(--white);font-weight:600}
+  .lead{font-size:19px;font-weight:300;color:var(--white);line-height:1.5}
+
+  .steps{margin:26px 0}
+  .stp{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--g700);align-items:baseline}
+  .stp:last-child{border-bottom:none}
+  .stp-n{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--accent);flex:0 0 26px}
+  .stp-t{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;flex:0 0 auto;min-width:130px}
+  .stp-d{color:var(--g200);font-size:14.5px;flex:1;min-width:180px}
+  @media(max-width:520px){.stp{flex-wrap:wrap}.stp-d{flex-basis:100%;padding-left:42px;margin-top:2px}}
+
+  .callout{
+    background:var(--g800);border-left:3px solid var(--accent);
+    padding:18px 20px;margin:24px 0;
+    font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.3;
+  }
+
+  /* ---------- PERGUNTAS ---------- */
+  .layer-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:6px}
+  .count{
+    font-family:var(--mono);font-size:13px;font-weight:600;color:var(--g300);
+    background:var(--g800);border:1px solid var(--g600);border-radius:999px;
+    padding:5px 13px;white-space:nowrap;transition:.25s;
+  }
+  .count.hot{background:var(--accent-soft);border-color:var(--accent-border);color:var(--white)}
+
+  .q{
+    display:flex;gap:15px;padding:18px 14px;margin:0 -14px;
+    border-bottom:1px solid var(--g700);cursor:pointer;
+    border-radius:10px;transition:background .18s;
+    -webkit-tap-highlight-color:transparent;user-select:none;
+  }
+  .q:hover{background:var(--g900)}
+  .q:last-of-type{border-bottom:none}
+  .box{
+    width:26px;height:26px;flex:0 0 26px;margin-top:1px;
+    border:1.5px solid var(--g500);border-radius:7px;background:var(--g900);
+    display:grid;place-items:center;transition:.18s;
+    font-family:var(--mono);font-size:15px;font-weight:700;color:transparent;
+  }
+  .q:hover .box{border-color:var(--g300)}
+  .q.on .box{background:var(--accent);border-color:var(--accent);color:#fff}
+  .q.on .q-t{color:var(--g300)}
+  .q-n{font-family:var(--mono);font-size:11px;color:var(--accent);font-weight:600;margin-right:7px}
+  .q-t{font-size:16px;color:var(--white);font-weight:500;line-height:1.45;transition:color .18s}
+  .q-r{font-size:14px;color:var(--g300);margin-top:6px;line-height:1.45}
+  .q-r b{color:var(--g100);font-weight:600}
+  .x{color:var(--accent);font-weight:700;font-family:var(--mono)}
+
+  /* ---------- RESULTADO ---------- */
+  #resultado{display:none}
+  #resultado.show{display:block;animation:fade .5s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .verdict{
+    background:linear-gradient(160deg,var(--g800),var(--g900));
+    border:1px solid var(--accent-border);border-radius:14px;
+    padding:26px 22px;margin-bottom:22px;
+  }
+  .verdict-k{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+  .verdict-h{font-family:var(--serif);font-size:clamp(23px,6vw,30px);font-weight:700;line-height:1.15;margin-bottom:14px}
+  .verdict p{font-size:15.5px;margin-bottom:12px;color:var(--g200)}
+  .verdict p:last-child{margin-bottom:0}
+  .verdict .err{border-top:1px dashed var(--g600);padding-top:13px;margin-top:15px;color:var(--g300);font-size:14.5px}
+  .verdict .err b{color:var(--accent)}
+  .tallies{display:flex;gap:9px;margin-bottom:22px;flex-wrap:wrap}
+  .t{flex:1;min-width:96px;background:var(--g800);border:1px solid var(--g600);border-radius:10px;padding:13px;text-align:center}
+  .t.hit{border-color:var(--accent-border);background:var(--accent-soft)}
+  .t-l{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--g300)}
+  .t-v{font-family:var(--mono);font-size:26px;font-weight:600;margin-top:5px}
+  .t.hit .t-v{color:var(--accent)}
+
+  /* ---------- 13ª ---------- */
+  .bigq{font-family:var(--serif);font-size:clamp(22px,5.6vw,29px);font-weight:700;line-height:1.28;margin:26px 0;color:var(--white)}
+  .accum{font-family:var(--serif);font-size:clamp(30px,8vw,42px);font-weight:700;color:var(--accent);text-align:center;margin:34px 0}
+  .method{display:flex;gap:9px;margin-top:26px}
+  .m{flex:1;background:var(--g800);border:1px solid var(--g600);border-radius:10px;padding:15px 9px;text-align:center}
+  .m-n{font-family:var(--mono);font-size:11px;color:var(--accent);font-weight:600}
+  .m-t{font-family:var(--serif);font-size:14px;font-weight:600;margin-top:7px;line-height:1.25}
+  .m-note{font-family:var(--mono);font-size:11px;color:var(--g300);text-align:center;margin-top:14px;letter-spacing:.1em;text-transform:uppercase}
+
+  /* ---------- FIM ---------- */
+  .next{
+    background:var(--accent-soft);border:1px solid var(--accent-border);border-radius:12px;
+    padding:20px;margin:26px 0;text-align:center;
+    font-family:var(--serif);font-size:19px;font-weight:600;
+  }
+  footer{padding:40px 0 30px;border-top:1px solid var(--g700)}
+  .flinks{font-family:var(--mono);font-size:16px;line-height:2.1;margin-bottom:16px}
+  .flinks a{color:var(--white);text-decoration:none;border-bottom:1px solid var(--g600)}
+  .flinks a:hover{color:var(--accent-hover);border-color:var(--accent)}
+  .flinks span{color:var(--accent)}
+  .ftag{font-size:13.5px;color:var(--g300);font-style:italic;max-width:44ch}
+
+  /* ---------- BARRA FIXA ---------- */
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:20;
+    background:rgba(8,9,10,.93);backdrop-filter:blur(14px);
+    border-top:1px solid var(--g600);
+    padding:12px 22px calc(12px + env(safe-area-inset-bottom));
+  }
+  .bar-in{max-width:var(--wrap);margin:0 auto;display:flex;align-items:center;gap:14px}
+  .prog{flex:1;min-width:0}
+  .prog-t{font-family:var(--mono);font-size:11.5px;color:var(--g300);letter-spacing:.06em;margin-bottom:6px}
+  .prog-t b{color:var(--white)}
+  .prog-bar{height:4px;background:var(--g700);border-radius:99px;overflow:hidden}
+  .prog-fill{height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .35s cubic-bezier(.4,0,.2,1)}
+  .btn{
+    font-family:var(--sans);font-size:14.5px;font-weight:600;
+    background:var(--accent);color:#fff;border:none;border-radius:9px;
+    padding:13px 20px;cursor:pointer;white-space:nowrap;transition:.18s;
+  }
+  .btn:hover{background:var(--accent-hover)}
+  .btn:disabled{background:var(--g700);color:var(--g500);cursor:not-allowed}
+  .btn-ghost{
+    display:inline-block;font-size:14.5px;font-weight:600;text-decoration:none;
+    color:var(--white);background:var(--g800);border:1px solid var(--g600);
+    border-radius:9px;padding:13px 20px;transition:.18s;
+  }
+  .btn-ghost:hover{border-color:var(--accent-border);background:var(--accent-soft)}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">ANGEL<i>CODE</i></div>
+    <div class="brand-sub">Labs · Material do Projeto #001</div>
+
+    <h1>Checklist de<br>Diagnóstico</h1>
+    <p class="sub">Descubra em qual <b>degrau</b> seu negócio está — e qual é o <b>próximo</b>.</p>
+    <div class="pill">12 perguntas · 4 minutos</div>
+  </div>
+</header>
+
+<!-- ============ INTRO ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Antes de começar</div>
+    <h2>Todo negócio digitaliza na mesma ordem. Quase ninguém sabe disso.</h2>
+    <p>Existem três degraus. Eles são sempre os mesmos, em qualquer setor, de qualquer tamanho:</p>
+
+    <div class="steps">
+      <div class="stp"><div class="stp-n">1</div><div class="stp-t">A Porta</div><div class="stp-d">quem te procura, encontra. E quem encontra, não some.</div></div>
+      <div class="stp"><div class="stp-n">2</div><div class="stp-t">O Atendimento</div><div class="stp-d">quem chega é respondido, sem depender de você estar livre.</div></div>
+      <div class="stp"><div class="stp-n">3</div><div class="stp-t">A Operação</div><div class="stp-d">o que acontece depois do sim roda sozinho.</div></div>
+    </div>
+
+    <div class="callout">A regra é uma só: não dá pra pular degrau.</div>
+
+    <p>Automatizar o atendimento de gente que nunca chega até você é caro e não resolve nada. Montar sistema pra uma operação que perde metade dos contatos na porta é acelerar o erro.</p>
+    <p>Este checklist serve pra uma coisa: <strong>descobrir onde você está.</strong> Não onde você quer estar. Onde você está hoje, terça-feira, com o negócio que você tem.</p>
+    <p><strong>Como responder:</strong> toque na frase quando ela for verdade pro seu negócio. Responda com o negócio real, não com o que você planeja fazer mês que vem. <strong>Nada disso é enviado pra ninguém — fica só no seu aparelho.</strong></p>
+  </div>
+</section>
+
+<!-- ============ CAMADA 1 ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Camada 1 · A Porta</div>
+    <div class="layer-h">
+      <h2 style="margin-bottom:0">Quem te procura, encontra? E quem encontra, fica?</h2>
+      <div class="count" id="c1">0 <span class="x">✗</span></div>
+    </div>
+    <div data-layer="1">
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">01</span>Pesquise seu nome ou o nome do seu negócio no Google. Agora, do celular, sem logar.</div><div class="q-r"><span class="x">✗</span> <b>se não aparecer nada além de rede social</b> — ou se aparecer algo que você não controla.</div></div></div>
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">02</span>Diga em voz alta, agora, quantas pessoas te procuraram nos últimos 30 dias. O número exato.</div><div class="q-r"><span class="x">✗</span> <b>se você não souber.</b> "Umas 30" é não saber.</div></div></div>
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">03</span>Alguém te procurou, perguntou, não fechou, e foi embora.</div><div class="q-r"><span class="x">✗</span> <b>se você não tem o contato dessa pessoa em lugar nenhum.</b></div></div></div>
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">04</span>Quem chega até você entende o que você faz, como você trabalha e mais ou menos quanto custa — <strong>sem precisar te perguntar.</strong></div><div class="q-r"><span class="x">✗</span> <b>se a resposta só existe na sua boca.</b></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAMADA 2 ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Camada 2 · O Atendimento</div>
+    <div class="layer-h">
+      <h2 style="margin-bottom:0">Quem chega é respondido — ou espera você ficar livre?</h2>
+      <div class="count" id="c2">0 <span class="x">✗</span></div>
+    </div>
+    <div data-layer="2">
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">05</span>Seu atendimento depende de você.</div><div class="q-r"><span class="x">✗</span> <b>se sim.</b> E vale <span class="x">✗</span> mesmo se "só nos casos importantes" — porque é você quem decide o que é importante.</div></div></div>
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">06</span>Alguém já te procurou, você demorou pra responder, e a pessoa nunca mais voltou.</div><div class="q-r"><span class="x">✗</span> <b>se você lembra de pelo menos um caso.</b> Se lembra de um, aconteceram dez que você não viu.</div></div></div>
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">07</span>Você digita a mesma mensagem várias vezes por dia.</div><div class="q-r"><span class="x">✗</span> <b>se sim.</b></div></div></div>
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">08</span>Seus clientes perguntam sempre as mesmas coisas — e você sabe exatamente quais são.</div><div class="q-r"><span class="x">✗</span> <b>se sim.</b> Você acabou de descrever um trabalho que não precisa ser seu.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAMADA 3 ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Camada 3 · A Operação</div>
+    <div class="layer-h">
+      <h2 style="margin-bottom:0">Depois do sim, o que acontece é processo — ou é você?</h2>
+      <div class="count" id="c3">0 <span class="x">✗</span></div>
+    </div>
+    <div data-layer="3">
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">09</span>Existe alguma planilha que você alimenta na mão.</div><div class="q-r"><span class="x">✗</span> <b>se sim.</b></div></div></div>
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">10</span>Você copia informação de um lugar pro outro — do WhatsApp pra planilha, da planilha pro sistema, do sistema pro papel.</div><div class="q-r"><span class="x">✗</span> <b>se sim.</b></div></div></div>
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">11</span>Você consegue ver seus números de hoje, agora, sem pedir pra ninguém e sem abrir três lugares diferentes.</div><div class="q-r"><span class="x">✗</span> <b>se não.</b></div></div></div>
+      <div class="q"><div class="box">✗</div><div><div class="q-t"><span class="q-n">12</span>Sua operação continua rodando igual se você sumir por uma semana.</div><div class="q-r"><span class="x">✗</span> <b>se não.</b> E se você respondeu "sim, mas eu ia ficar olhando o celular" — isso é <span class="x">✗</span>.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULTADO ============ -->
+<section id="resultado">
+  <div class="wrap">
+    <div class="kicker">O seu resultado</div>
+    <h2>Seu degrau é o <span style="color:var(--accent)">primeiro</span> com 2 ou mais ✗. Não o pior. O primeiro.</h2>
+    <p>Essa é a parte que quase todo mundo lê errado. Não conte o total. <strong>Olhe de cima pra baixo e pare na primeira camada com 2 ✗ ou mais.</strong></p>
+
+    <div class="tallies">
+      <div class="t" id="t1"><div class="t-l">Camada 1</div><div class="t-v" id="v1">0</div></div>
+      <div class="t" id="t2"><div class="t-l">Camada 2</div><div class="t-v" id="v2">0</div></div>
+      <div class="t" id="t3"><div class="t-l">Camada 3</div><div class="t-v" id="v3">0</div></div>
+    </div>
+
+    <div id="verdict"></div>
+  </div>
+</section>
+
+<!-- ============ 13ª PERGUNTA ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker">A décima terceira pergunta</div>
+    <h2>Uma só. Não conta ponto. É a que fica.</h2>
+    <div class="bigq">Se você começasse seu negócio do zero hoje, você faria o processo exatamente igual?</div>
+    <p class="lead">Se a resposta é não — e é quase sempre não — então o processo que você tem hoje não foi escolhido.</p>
+    <div class="accum">Ele foi acumulado.</div>
+    <p>Uma gambiarra em cima da outra, cada uma resolvendo o incêndio daquela semana, todas ainda lá anos depois. Ninguém desenhou isso. Foi acontecendo.</p>
+    <p>E é por isso que quase nada de prateleira funciona: <strong>as soluções são desenhadas e o seu problema foi acumulado.</strong> Não encaixa.</p>
+    <p>A boa notícia é que o inverso também vale. <strong>Dá pra desenhar de volta.</strong> Só não começa pelo código.</p>
+
+    <div class="method">
+      <div class="m"><div class="m-n">01</div><div class="m-t">Entender<br>o problema</div></div>
+      <div class="m"><div class="m-n">02</div><div class="m-t">Desenhar<br>a solução</div></div>
+      <div class="m"><div class="m-n">03</div><div class="m-t">Desen&shy;volver</div></div>
+    </div>
+    <div class="m-note">Nessa ordem. Sempre.</div>
+  </div>
+</section>
+
+<!-- ============ FECHAMENTO ============ -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Fechamento</div>
+    <h2>Você acabou de fazer um diagnóstico.</h2>
+    <p class="lead">Não é o meu diagnóstico. É o seu. Você respondeu, você contou, você viu.</p>
+    <p style="margin-top:20px">Se você quiser me contar em qual degrau caiu, é só responder o direct de onde veio esse link. <strong>Eu leio todas.</strong> Não vou te oferecer nada — o AngelCode Labs não existe pra isso.</p>
+    <p><strong>AngelCode Labs</strong> é onde eu documento o que eu construo, projeto por projeto. O que existia antes, como pensei, o que quebrou, o que ficou de pé.</p>
+    <div class="next">Projeto #002 já está na bancada.</div>
+    <a class="btn-ghost" href="checklist-mapa.pdf" download>↓ Baixar em PDF pra imprimir</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks">
+      <span>↗</span> <a href="/">angelcode.com.br</a><br>
+      <span>@</span> <a href="https://instagram.com/mizael.anjos_" target="_blank" rel="noopener">mizael.anjos_</a>
+    </div>
+    <div class="ftag">AngelCode · Utilizo Inteligência Artificial pra construir soluções que aumentam a produtividade de empresas.</div>
+  </div>
+</footer>
+
+<!-- ============ BARRA FIXA ============ -->
+<div class="bar">
+  <div class="bar-in">
+    <div class="prog">
+      <div class="prog-t"><b id="done">0</b> <span id="dlabel">marcadas de 12</span></div>
+      <div class="prog-bar"><div class="prog-fill" id="fill"></div></div>
+    </div>
+    <button class="btn" id="cta">Ver meu degrau</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var qs = Array.prototype.slice.call(document.querySelectorAll('.q'));
+  var KEY = 'ac-mapa-v1';
+  var touched = {};      // perguntas que a pessoa já olhou (marcou ou desmarcou)
+  var revealed = false;
+
+  var COPY = {
+    1:{h:'Degrau 1 · A Porta',
+       p:['Você tem gente te procurando e não tem o que mostrar. Ou tem, e o contato dessa pessoa se perde.',
+          '<b>O que isso NÃO significa:</b> que você precisa aparecer mais. Você provavelmente não está sem cliente. <b>Você está perdendo cliente.</b> São coisas diferentes e resolvem de jeitos diferentes.',
+          '<b>Seu próximo passo:</b> parar de vazar quem já te procura. Antes de qualquer automação, qualquer sistema, qualquer anúncio.'],
+       e:'<b>O erro caro deste degrau:</b> investir em atrair mais gente. Encher um balde furado é a única coisa mais cara que ter um balde furado.'},
+    2:{h:'Degrau 2 · O Atendimento',
+       p:['Sua porta funciona. Chega gente. E ela trava em você.',
+          '<b>O que isso significa:</b> você virou a recepcionista do próprio negócio. Não porque você é desorganizado — porque ninguém nunca tirou isso das suas costas.',
+          '<b>Seu próximo passo:</b> que a primeira resposta aconteça sem você. Só a primeira. Não é substituir você — é fazer com que quem pergunta "quanto custa" às 10h não vá embora antes das 21h.'],
+       e:'<b>O erro caro deste degrau:</b> contratar mais uma pessoa pra responder. Isso resolve por 4 meses e volta maior.'},
+    3:{h:'Degrau 3 · A Operação',
+       p:['Chega gente, ela é atendida, e a partir daí tudo é no braço.',
+          '<b>O que isso significa:</b> seu negócio funciona. O problema não é comercial, é de regulagem. Você está injetando mais combustível — mais gente, mais lead, mais anúncio — num motor que não converte isso em potência.',
+          '<b>Seu próximo passo:</b> ninguém deveria te vender sistema antes de abrir o capô. Você levaria seu carro pro mecânico dizendo qual peça trocar?'],
+       e:'<b>O erro caro deste degrau:</b> comprar um sistema pronto. Você já tentou. Não pegou. <b>Não pegou porque instalaram peça nova num motor que ninguém tinha aberto</b> — não porque você não soube usar.'},
+    0:{h:'Nenhum degrau travado',
+       p:['Raro. Sério.','Se você foi honesto e chegou aqui, seu negócio está mais organizado que o de 9 em cada 10 pessoas que responderam isso. O próximo passo não é corrigir — é <b>construir vantagem</b>: o que a sua operação faz que a do concorrente não consegue copiar?'],
+       e:''}
+  };
+
+  function layerOf(q){ return +q.closest('[data-layer]').getAttribute('data-layer'); }
+
+  function counts(){
+    var c={1:0,2:0,3:0};
+    qs.forEach(function(q){ if(q.classList.contains('on')) c[layerOf(q)]++; });
+    return c;
+  }
+
+  function degree(c){
+    if(c[1]>=2) return 1;
+    if(c[2]>=2) return 2;
+    if(c[3]>=2) return 3;
+    return 0;
+  }
+
+  function save(){
+    try{
+      localStorage.setItem(KEY, JSON.stringify({
+        on: qs.map(function(q){ return q.classList.contains('on')?1:0 }),
+        t: Object.keys(touched)
+      }));
+    }catch(e){}
+  }
+
+  function render(){
+    var c = counts();
+    var marked = c[1]+c[2]+c[3];
+    var seen = Object.keys(touched).length;
+
+    [1,2,3].forEach(function(i){
+      var el=document.getElementById('c'+i);
+      el.innerHTML = c[i]+' <span class="x">✗</span>';
+      el.classList.toggle('hot', c[i]>=2);
+      var v=document.getElementById('v'+i); if(v) v.textContent=c[i];
+      var t=document.getElementById('t'+i); if(t) t.classList.toggle('hit', c[i]>=2);
+    });
+
+    // A pessoa só toca no que é verdade — quem tem 5 problemas nunca chegaria a 12.
+    // A barra mede o que foi marcado; o resultado fica sempre disponível.
+    document.getElementById('done').textContent = marked;
+    document.getElementById('dlabel').textContent = marked===1 ? 'marcada de 12' : 'marcadas de 12';
+    document.getElementById('fill').style.width = (Math.max(marked,seen)/12*100)+'%';
+
+    if(revealed){
+      var d = degree(c), k = COPY[d];
+      document.getElementById('verdict').innerHTML =
+        '<div class="verdict">'+
+          '<div class="verdict-k">'+(d?'Você está no':'Resultado')+'</div>'+
+          '<div class="verdict-h">'+k.h+'</div>'+
+          k.p.map(function(x){return '<p>'+x+'</p>'}).join('')+
+          (k.e?'<p class="err">'+k.e+'</p>':'')+
+        '</div>';
+    }
+    save();
+  }
+
+  qs.forEach(function(q,i){
+    q.setAttribute('role','button');
+    q.setAttribute('tabindex','0');
+    function toggle(){
+      q.classList.toggle('on');
+      touched[i]=1;
+      q.setAttribute('aria-pressed', q.classList.contains('on'));
+      render();
+    }
+    q.addEventListener('click', toggle);
+    q.addEventListener('keydown', function(e){
+      if(e.key===' '||e.key==='Enter'){ e.preventDefault(); toggle(); }
+    });
+  });
+
+  document.getElementById('cta').addEventListener('click', function(){
+    revealed = true;
+    var r = document.getElementById('resultado');
+    r.classList.add('show');
+    render();
+    r.scrollIntoView({behavior:'smooth', block:'start'});
+    this.textContent = 'Meu degrau ↑';
+  });
+
+  // restaura sessão anterior
+  try{
+    var s = JSON.parse(localStorage.getItem(KEY)||'null');
+    if(s && s.on){
+      s.on.forEach(function(v,i){ if(v && qs[i]) qs[i].classList.add('on'); });
+      (s.t||[]).forEach(function(i){ touched[i]=1; });
+    }
+  }catch(e){}
+
+  render();
+})();
+</script>
+</body>
+</html>
