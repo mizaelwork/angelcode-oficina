@@ -694,7 +694,13 @@ figure, blockquote { margin: 0; }
   background: var(--ma-grafite-900);
   padding: var(--space-5);
 }
-.who__visual img { width: 100%; }
+.who__visual img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: var(--radius-md, 0.5rem);
+}
 .who__visual figcaption {
   margin-top: var(--space-4);
   padding-top: var(--space-3);
