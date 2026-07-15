@@ -1,10 +1,16 @@
-# Site institucional AngelCode — servido como estático por nginx.
-# Build context = esta pasta (/site). EasyPanel: Caminho de Build = /site.
+# Site institucional AngelCode (angelcode.com.br) — estático via nginx.
 FROM nginx:alpine
 
-# Remove a página default do nginx e copia o site
+# Substitui a config default pela config com headers de segurança
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copia o site
 RUN rm -rf /usr/share/nginx/html/*
 COPY . /usr/share/nginx/html
 
-# nginx já serve /usr/share/nginx/html na porta 80 com index.html
+# Remove arquivos de build/config que não devem ser servidos ao público
+RUN rm -f /usr/share/nginx/html/nginx.conf \
+          /usr/share/nginx/html/Dockerfile \
+          /usr/share/nginx/html/.dockerignore
+
 EXPOSE 80
