@@ -21,9 +21,14 @@
 
   <link rel="preload" as="image" href="assets/logo-mark-white.png">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="site.css">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;650;700&family=DM+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Release: site-reestilizado-novo-2026-09-21 -->
+  <div class="intro" aria-hidden="true"><img src="assets/logo-mark-white.png" width="44" height="44" alt=""><span>AngelCode</span><i></i></div>
   <a class="skip-link" href="#main">Ir para o conteúdo</a>
 
   <div class="progress" data-progress aria-hidden="true"></div>
@@ -65,7 +70,7 @@
         <a href="#caminho">O caminho</a>
         <a href="#bancada">A bancada</a>
         <a href="#quem">Quem prepara</a>
-        <a class="btn btn--brand nav__cta" data-whatsapp-link href="https://wa.me/5548996986794">
+        <a class="btn btn--brand nav__cta" data-whatsapp-link href="https://wa.me/5548996986794?text=Quero%20encontrar%20os%20gargalos%20da%20minha%20opera%C3%A7%C3%A3o.">
           Agendar diagnóstico
         </a>
       </nav>
@@ -90,7 +95,7 @@
             Todo negócio é um motor. O seu está rodando abaixo da potência.
           </p>
           <div class="hero__cta">
-            <a class="btn btn--brand btn--xl" data-whatsapp-link href="https://wa.me/5548996986794">
+            <a class="btn btn--brand btn--xl" data-whatsapp-link href="https://wa.me/5548996986794?text=Quero%20encontrar%20os%20gargalos%20da%20minha%20opera%C3%A7%C3%A3o.">
               Quero encontrar meus gargalos
             </a>
             <a class="btn btn--line btn--xl" href="#diagnostico">Como funciona</a>
@@ -98,59 +103,59 @@
           <div class="hero__stack">
             <span class="hero__stack-label num">O que passa pela bancada</span>
             <ul class="hero__stack-items num">
-              <li>WhatsApp API Oficial</li>
-              <li>n8n</li>
-              <li>Supabase</li>
-              <li>CRM sob medida</li>
-              <li>Agentes de IA</li>
+              <li>Revisão de processos</li>
+              <li>Atendimento ao cliente</li>
+              <li>Banco de dados</li>
+              <li>Métricas do negócio</li>
+              <li>Agentes personalizados para problemas específicos</li>
             </ul>
           </div>
         </div>
 
         <!-- Painel: scanner operacional -->
         <aside class="scan reveal reveal--late" data-scan aria-label="Demonstração: scanner operacional diagnosticando um negócio">
-          <header class="scan__bar num">
+          <div class="scan__caption num">Demonstração · Scanner Operacional™</div><header class="scan__bar num">
             <span class="scan__dot"></span>
             <span class="scan__title">scanner operacional&trade;</span>
             <span class="scan__power"><span data-power-label>potência atual</span> <strong data-power>54%</strong></span>
           </header>
 
-          <ul class="scan__areas" aria-hidden="true">
+          <div class="scan__dial" aria-hidden="true"><div class="dial__ring"></div><div class="scan__beam"></div><div class="dial__number"><strong data-dial-value>54</strong><span>%</span><small data-dial-label>potência atual</small></div><span class="dial__min">0</span><span class="dial__max">100</span></div><ul class="scan__areas" aria-hidden="true">
             <li class="scan__area" data-area>
               <span class="scan__label num">Vendas</span>
-              <span class="scan__track"><span class="scan__fill" data-fill></span></span>
-              <span class="scan__status num" data-status>-</span>
+              <span class="scan__track"><span class="scan__fill" style="--fill:0.38" data-fill></span></span>
+              <span class="scan__status num" data-status>gargalo</span>
             </li>
             <li class="scan__area" data-area>
               <span class="scan__label num">Atendimento</span>
-              <span class="scan__track"><span class="scan__fill" data-fill></span></span>
-              <span class="scan__status num" data-status>-</span>
+              <span class="scan__track"><span class="scan__fill" style="--fill:0.52" data-fill></span></span>
+              <span class="scan__status num" data-status>gargalo</span>
             </li>
             <li class="scan__area" data-area>
               <span class="scan__label num">Processos</span>
-              <span class="scan__track"><span class="scan__fill" data-fill></span></span>
-              <span class="scan__status num" data-status>-</span>
+              <span class="scan__track"><span class="scan__fill" style="--fill:0.41" data-fill></span></span>
+              <span class="scan__status num" data-status>gargalo</span>
             </li>
             <li class="scan__area" data-area>
               <span class="scan__label num">Gestão</span>
-              <span class="scan__track"><span class="scan__fill" data-fill></span></span>
-              <span class="scan__status num" data-status>-</span>
+              <span class="scan__track"><span class="scan__fill" style="--fill:0.79" data-fill></span></span>
+              <span class="scan__status num" data-status>regulado</span>
             </li>
             <li class="scan__area" data-area>
               <span class="scan__label num">Tecnologia</span>
-              <span class="scan__track"><span class="scan__fill" data-fill></span></span>
-              <span class="scan__status num" data-status>-</span>
+              <span class="scan__track"><span class="scan__fill" style="--fill:0.34" data-fill></span></span>
+              <span class="scan__status num" data-status>gargalo</span>
             </li>
           </ul>
 
           <div class="gauge" aria-hidden="true">
             <span class="gauge__label num">régua de potência</span>
-            <div class="gauge__bars" data-gauge></div>
+            <div class="gauge__bars" data-gauge><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div>
             <span class="gauge__read num" data-gauge-read>54%</span>
           </div>
 
           <div class="oplog num" aria-hidden="true">
-            <div class="oplog__lines" data-log></div>
+            <div class="oplog__lines" data-log><p><span>01</span> atendimento analisado · lead esperando resposta</p><p><span>02</span> follow-up sem responsável identificado</p><p><span>03</span> dados espalhados em três ferramentas</p><p><span>04</span> 14h semanais em tarefas repetidas</p><p><span>05</span> plano de correção gerado · <strong>91% projetado</strong></p></div>
           </div>
         </aside>
       </div>
@@ -158,7 +163,7 @@
 
     <!-- fita técnica (léxico da oficina) -->
     <div class="tape" aria-hidden="true">
-      <div class="tape__track" data-tape></div>
+      <div class="tape__track" data-tape><div class="tape__seq"><span>potência</span><span class="tape__dot">·</span><span>diagnóstico</span><span class="tape__dot">·</span><span>remap</span><span class="tape__dot">·</span><span>gargalo</span><span class="tape__dot">·</span><span>oficina</span><span class="tape__dot">·</span><span>motor forjado</span><span class="tape__dot">·</span><span>escala</span><span class="tape__dot">·</span><span>operação</span><span class="tape__dot">·</span><span>eficiência</span><span class="tape__dot">·</span><span>alta performance</span><span class="tape__dot">·</span></div><div class="tape__seq"><span>potência</span><span class="tape__dot">·</span><span>diagnóstico</span><span class="tape__dot">·</span><span>remap</span><span class="tape__dot">·</span><span>gargalo</span><span class="tape__dot">·</span><span>oficina</span><span class="tape__dot">·</span><span>motor forjado</span><span class="tape__dot">·</span><span>escala</span><span class="tape__dot">·</span><span>operação</span><span class="tape__dot">·</span><span>eficiência</span><span class="tape__dot">·</span><span>alta performance</span><span class="tape__dot">·</span></div></div>
     </div>
 
     <!-- ══════════ FRASE-PONTE (método em uma frase) ══════════ -->
@@ -189,11 +194,11 @@
         <div class="shift reveal reveal--late">
           <div class="shift__col shift__col--before">
             <h3 class="shift__label num">Motor mal regulado</h3>
-            <ul id="shift-before"></ul>
+            <ul id="shift-before"><li>Lead pergunta o preço às 19h. Às 9h do dia seguinte já comprou do concorrente.</li><li>Follow-up vive na memória de alguém. Memória falha, e falha custa venda.</li><li>A equipe passa o dia apagando incêndio e digitando o mesmo dado três vezes.</li><li>Ninguém sabe quantas propostas estão abertas. Nem quanto dinheiro tem nelas.</li><li>Você descobre quanto vendeu quando o mês fecha. Tarde demais pra corrigir.</li></ul>
           </div>
           <div class="shift__col shift__col--after">
             <h3 class="shift__label num">+ motor preparado</h3>
-            <ul id="shift-after"></ul>
+            <ul id="shift-after"><li>Resposta em segundos, de madrugada, no feriado, no almoço. Nenhuma venda esfria.</li><li>O sistema cobra, lembra e retoma a conversa sem pedir licença.</li><li>O trabalho repetido roda sozinho. A equipe gasta o dia com o que dá dinheiro: vender.</li><li>Cada negociação com dono, etapa e próximo passo. Você sabe quanto tem na mesa.</li><li>Você abre o painel e vê o número do dia, hoje. Decide com dado, não com sensação.</li></ul>
           </div>
         </div>
       </div>
@@ -216,7 +221,7 @@
             <em>“quanto esse motor está deixando de faturar por causa dos gargalos?”</em>
           </p>
           <div class="hero__cta">
-            <a class="btn btn--brand btn--xl" data-whatsapp-link href="https://wa.me/5548996986794">
+            <a class="btn btn--brand btn--xl" data-whatsapp-link href="https://wa.me/5548996986794?text=Quero%20encontrar%20os%20gargalos%20da%20minha%20opera%C3%A7%C3%A3o.">
               Agendar meu diagnóstico
             </a>
           </div>
@@ -225,7 +230,7 @@
 
         <aside class="diag__card reveal reveal--late">
           <h3 class="diag__card-title num">o que o scanner varre</h3>
-          <ul class="diag__list num" id="diag-areas"></ul>
+          <ul class="diag__list num" id="diag-areas"><li>Vendas</li><li>Atendimento</li><li>Marketing</li><li>Processos</li><li>Gestão</li><li>Tecnologia</li><li>Equipe</li></ul>
           <div class="diag__deliver">
             <span class="diag__card-title num">o que você recebe</span>
             <p>
@@ -249,7 +254,22 @@
             primeiro o diagnóstico, depois o remap, e só então a forja.
           </p>
         </header>
-        <ol class="steps steps--three" id="steps"></ol>
+        <ol class="steps steps--three" id="steps">
+      <li class="step reveal" style="--i:0">
+        <span class="step__num">etapa 01</span>
+        <h3>Scanner Operacional&trade;<small>diagnóstico</small></h3>
+        <p>Abro o capô antes de falar de peça. Mapeio vendas, atendimento, processos e gestão, e te entrego o mapa do dinheiro que está escapando: o que corrigir primeiro e o que cada correção destrava. Se não valer a pena mexer, eu te digo.</p>
+      </li>
+      <li class="step reveal" style="--i:1">
+        <span class="step__num">etapa 02</span>
+        <h3>Remap&trade;<small>níveis 1 · 2 · 3</small></h3>
+        <p>Primeiro extraio resultado do que você já tem: processo, funil, atendimento. Sem gastar com peça nova. Depois troco o que trava o crescimento, e fecho com painel e indicador pra você decidir pelos números.</p>
+      </li>
+      <li class="step reveal" style="--i:2">
+        <span class="step__num">etapa 03</span>
+        <h3>Motor Forjado&trade;<small>alta performance</small></h3>
+        <p>Operação exclusiva: sistema próprio, agentes especializados, infraestrutura sua. A empresa cresce em vendas sem crescer na mesma proporção em folha de pagamento. Isso é escalar.</p>
+      </li></ol>
       </div>
     </section>
 
@@ -264,7 +284,62 @@
             para a operação, ou não saem da bancada.
           </p>
         </header>
-        <div class="ledger" id="systems"></div>
+        <div class="ledger" id="systems">
+      <article class="row reveal" style="--i:0">
+        <span class="row__idx">01</span>
+        <div class="row__main">
+          <h3>Agente de WhatsApp com IA · API Oficial</h3>
+          <p>Enquanto sua equipe dorme, nenhum lead esfria. O cliente recebe resposta em segundos, a qualquer hora, e chega em você só quem está pronto pra comprar. Roda na API Oficial do WhatsApp: sem número bloqueado, sem gambiarra.</p>
+        </div>
+        <div class="row__gain">
+          <span class="row__gain-label">o que muda na sua semana</span>
+          <p>As vendas que hoje morrem esperando resposta voltam pro caixa.</p>
+        </div>
+      </article>
+      <article class="row reveal" style="--i:1">
+        <span class="row__idx">02</span>
+        <div class="row__main">
+          <h3>CRM sob medida</h3>
+          <p>Nunca mais pergunte: “em que pé está aquele cliente?”. Cada negociação com dono, etapa e próximo passo. Isso acontece porque o CRM é desenhado pro seu processo de venda, não um software genérico que a equipe finge usar.</p>
+        </div>
+        <div class="row__gain">
+          <span class="row__gain-label">o que muda na sua semana</span>
+          <p>Nenhuma proposta aberta se perde por esquecimento.</p>
+        </div>
+      </article>
+      <article class="row reveal" style="--i:2">
+        <span class="row__idx">03</span>
+        <div class="row__main">
+          <h3>Painel de instrumentos</h3>
+          <p>Você deixa de decidir pelo sentimento. Passa a decidir pelos números. Vendas, atendimento e funil num painel só, atualizado sozinho, lido em 30 segundos. Sem painel, todo motor parece estar rodando bem.</p>
+        </div>
+        <div class="row__gain">
+          <span class="row__gain-label">o que muda na sua semana</span>
+          <p>A reunião de segunda começa com dado, não com achismo.</p>
+        </div>
+      </article>
+      <article class="row reveal" style="--i:3">
+        <span class="row__idx">04</span>
+        <div class="row__main">
+          <h3>Automações de operação</h3>
+          <p>As tarefas que hoje dependem de alguém lembrar, como cobrança, aviso, registro e relatório, viram fluxos que rodam sozinhos, todo dia, sem falhar. Menos erro, menos retrabalho, mais velocidade.</p>
+        </div>
+        <div class="row__gain">
+          <span class="row__gain-label">o que muda na sua semana</span>
+          <p>Horas de trabalho repetido saem da folha da semana e não voltam.</p>
+        </div>
+      </article>
+      <article class="row reveal" style="--i:4">
+        <span class="row__idx">05</span>
+        <div class="row__main">
+          <h3>Integrações</h3>
+          <p>A mesma informação nunca mais será digitada três vezes. As ferramentas que você já usa passam a conversar entre si: o dado entra uma vez e aparece onde precisa, sem ninguém copiar e colar.</p>
+        </div>
+        <div class="row__gain">
+          <span class="row__gain-label">o que muda na sua semana</span>
+          <p>O erro de digitação some junto com o retrabalho.</p>
+        </div>
+      </article></div>
       </div>
     </section>
 
@@ -301,9 +376,9 @@
           <img
             src="assets/mizael-anjos.jpg"
             alt="Mizael dos Anjos, fundador da AngelCode"
-            loading="lazy"
+            loading="lazy" width="768" height="1024"
           >
-          <figcaption class="num">Mizael dos Anjos · chefe de oficina</figcaption>
+          <figcaption class="num">Mizael dos Anjos · chefe de operação</figcaption>
         </figure>
         <div class="who__copy reveal reveal--late">
           <p class="sec__tag num">/ 06 - quem prepara</p>
@@ -342,7 +417,7 @@
             Me chama no WhatsApp e me conta como a sua operação roda hoje. Eu te digo
             onde estão os gargalos, e o que não vale a pena mexer.
           </p>
-          <a class="btn btn--brand btn--xl" data-whatsapp-link href="https://wa.me/5548996986794">
+          <a class="btn btn--brand btn--xl" data-whatsapp-link href="https://wa.me/5548996986794?text=Quero%20encontrar%20os%20gargalos%20da%20minha%20opera%C3%A7%C3%A3o.">
             Quero preparar meu motor
           </a>
           <p class="finale__note num">Resposta direta, de operador pra operador.</p>
@@ -368,12 +443,12 @@
       </a>
       <p class="foot__tagline">Não construímos automações. Construímos operações.</p>
       <nav class="foot__links" aria-label="Contato">
-        <a data-whatsapp-link href="https://wa.me/5548996986794">WhatsApp</a>
+        <a data-whatsapp-link href="https://wa.me/5548996986794?text=Quero%20encontrar%20os%20gargalos%20da%20minha%20opera%C3%A7%C3%A3o.">WhatsApp</a>
         <a data-instagram-link href="https://instagram.com/mizael.anjos_">Instagram</a>
       </nav>
     </div>
     <div class="container foot__base num">
-      <span>&copy; <span id="year"></span> AngelCode · Mizael dos Anjos</span>
+      <span>&copy; <span id="year">2026</span> AngelCode · Mizael dos Anjos</span>
       <span>oficina de alta performance</span>
     </div>
   </footer>
